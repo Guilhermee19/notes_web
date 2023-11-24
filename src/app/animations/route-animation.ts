@@ -9,9 +9,13 @@ import {
 
 export const slideInAnimation = trigger('routeAnimations', [
   transition('* => *', [
-    query(':enter, :leave', style({ position: 'fixed', width: '100%' }), {
-      optional: true,
-    }),
+    query(
+      ':enter, :leave',
+      style({ position: 'fixed', width: '100%', height: '100%' }),
+      {
+        optional: true,
+      }
+    ),
     group([
       query(
         ':enter',

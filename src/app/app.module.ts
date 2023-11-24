@@ -1,5 +1,5 @@
 import { DatePipe, registerLocaleData } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import localePt from '@angular/common/locales/pt';
 import { DEFAULT_CURRENCY_CODE, LOCALE_ID, NgModule } from '@angular/core';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
@@ -15,6 +15,13 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { SharedModule } from './components/shared/shared.module';
 import { NotifierModule } from 'angular-notifier';
 import { configNotifier } from './models/utils';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+
+// AoT requires an exported function for factories
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 registerLocaleData(localePt);
 
@@ -34,6 +41,15 @@ registerLocaleData(localePt);
       registrationStrategy: 'registerWhenStable:30000',
     }),
     NotifierModule.withConfig(configNotifier),
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+      // defaultLanguage: 'en',
+      defaultLanguage: 'pt-br',
+    }),
   ],
   providers: [
     DatePipe,

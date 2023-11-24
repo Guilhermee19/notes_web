@@ -8,16 +8,10 @@
     "build": "ng lint && ng build",
     "build:prod": "ng lint && ng build --configuration production",
     "watch": "ng lint && ng build --watch --configuration development",
-    "prepare": "husky install",
-    "commit": "git-cz",
-    "test": "ng test",
-    "e2e": "ng e2e",
     "tree": "tree -l 100 --ignore node_modules --ignore .angular --ignore dist -o directory-tree.txt",
     "lint": "ng lint",
     "clear": "rm -rf node_modules && rm package-lock.json && rm -rf .angular && npm install",
-    "delete-spec": "python3 delete-spec.py",
-    "s3": "aws s3 cp dist s3://........... --recursive",
-    "build:s3": "ng build && npm run s3"
+    "delete-spec": "python3 delete-spec.py"
   },
   "private": true,
   "dependencies": {
@@ -33,6 +27,8 @@
     "@angular/pwa": "^0.5.3",
     "@angular/router": "^14.2.0",
     "@angular/service-worker": "^14.2.0",
+    "@ngx-translate/core": "^14.0.0",
+    "@ngx-translate/http-loader": "^7.0.0",
     "angular-notifier": "^12.0.0",
     "md5-typescript": "^1.0.5",
     "medium-zoom": "^1.0.8",
