@@ -1,0 +1,12 @@
+section {
+  width: var(--width);
+  max-width: var(--max-width);
+  margin: 0 auto;
+
+  img {
+    width: 80%;
+    max-width: 500px;
+    height: max-content;
+    object-fit: contain;
+  }
+}

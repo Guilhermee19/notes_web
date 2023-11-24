@@ -7,6 +7,7 @@ import { HomeComponent } from './home.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { ZoomableDirective } from 'src/app/directives/zoomable.directive';
+import { FooterModule } from 'src/app/components/footer/footer.module';
 
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ import { ZoomableDirective } from 'src/app/directives/zoomable.directive';
     HomeRoutingModule,
     ReactiveFormsModule,
     MatAutocompleteModule,
+    FooterModule,
   ],
   declarations: [HomeComponent, ZoomableDirective],
 })

@@ -34,12 +34,16 @@ $my-theme: mat.define-light-theme(
 
 html,
 body {
-  height: 100%;
+  position: relative;
+  height: max-content;
+  min-height: 100vh;
 }
 body {
   margin: 0;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
   background: var(--bg-default);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .cdk-global-overlay-wrapper,
