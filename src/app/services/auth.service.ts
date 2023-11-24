@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpService } from './http.service';
-import { IToken } from '../models/user';
 import { HttpParams } from '@angular/common/http';
 
 @Injectable({
@@ -14,6 +13,6 @@ export class AuthService {
       .set('username', email)
       .set('password', password);
 
-    return this.http.post<IToken>('auth/login', body);
+    return this.http.post<any>('auth/login', body);
   }
 }

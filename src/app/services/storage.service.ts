@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { Subject } from 'rxjs';
-import { IUser } from '../models/user';
 
 @Injectable({
   providedIn: 'root',
@@ -11,15 +10,6 @@ export class StorageService {
   constructor(private cookieService: CookieService, private router: Router) {}
 
   UserSubject = new Subject<void>();
-  myUser: IUser = {} as IUser;
-
-  get myself() {
-    return this.myUser;
-  }
-
-  set myself(user: IUser) {
-    this.myUser = user;
-  }
 
   watchUser() {
     return this.UserSubject.asObservable();

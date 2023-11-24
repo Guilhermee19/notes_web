@@ -8,13 +8,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { IconDirective } from 'src/app/directives/icon.directive';
 import { InitialLettersDirective } from 'src/app/directives/initial-letters.directive';
 import { InputFileDirective } from 'src/app/directives/input-file.directive';
-import { SafePipe } from '../../pipes/safe.pipe';
-import { ConfirmModalComponent } from '../modals/confirm-modal/confirm-modal.component';
-import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 import { LoadingComponent } from './loading/loading.component';
 import { PageLoadingComponent } from './page-loading/page-loading.component';
 import { PaginationComponent } from './pagination/pagination.component';
-import { SkeletonLoadingComponent } from './skeleton-loading/skeleton-loading.component';
 import { AvatarComponent } from './avatar/avatar.component';
 
 @NgModule({
@@ -32,10 +28,6 @@ import { AvatarComponent } from './avatar/avatar.component';
     IconDirective,
     InputFileDirective,
     InitialLettersDirective,
-    ConfirmModalComponent,
-    SkeletonLoadingComponent,
-    AutocompleteComponent,
-    SafePipe,
     AvatarComponent,
   ],
   exports: [
@@ -45,10 +37,6 @@ import { AvatarComponent } from './avatar/avatar.component';
     IconDirective,
     InputFileDirective,
     MatButtonModule,
-    ConfirmModalComponent,
-    SkeletonLoadingComponent,
-    AutocompleteComponent,
-    SafePipe,
     InitialLettersDirective,
     AvatarComponent,
   ],
