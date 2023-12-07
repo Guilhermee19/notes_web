@@ -57,3 +57,8 @@ body {
   overflow: visible;
   vertical-align: -0.125em;
 }
+
+.medium-zoom-overlay {
+  backdrop-filter: blur(1px);
+  background: rgb(30 30 30 / 30%) !important;
+}

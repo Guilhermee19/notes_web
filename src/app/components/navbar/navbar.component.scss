@@ -12,6 +12,9 @@
 */
 
 nav {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
   width: var(--width);
   max-width: var(--max-width);
   margin: 1rem auto;
