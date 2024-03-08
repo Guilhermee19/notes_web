@@ -15,13 +15,6 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { SharedModule } from './components/shared/shared.module';
 import { NotifierModule } from 'angular-notifier';
 import { configNotifier } from './models/utils';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-
-// AoT requires an exported function for factories
-export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http);
-}
 
 registerLocaleData(localePt);
 
@@ -41,15 +34,6 @@ registerLocaleData(localePt);
       registrationStrategy: 'registerWhenStable:30000',
     }),
     NotifierModule.withConfig(configNotifier),
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient],
-      },
-      // defaultLanguage: 'en',
-      defaultLanguage: 'pt-br',
-    }),
   ],
   providers: [
     DatePipe,
