@@ -7,15 +7,20 @@ const SPR = false;
 const routes: Routes = [
   {
     path: '',
-    component: NavbarComponent,
-    children: [
-      {
-        path: '',
-        loadChildren: () =>
-          import('./pages/home/home.module').then((m) => m.HomeModule),
-      },
-    ],
+    loadChildren: () =>
+      import('./pages/home/home.module').then((m) => m.HomeModule),
   },
+  // {
+  //   path: '',
+  //   component: NavbarComponent,
+  //   children: [
+  //     {
+  //       path: '',
+  //       loadChildren: () =>
+  //         import('./pages/home/home.module').then((m) => m.HomeModule),
+  //     },
+  //   ],
+  // },
 ];
 
 @NgModule({

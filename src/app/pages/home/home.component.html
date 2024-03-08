@@ -1,3 +1,24 @@
-<section>
-  <img zoomable src="../../../assets/images/logo.png" alt="" />
+<section class="limit">
+  <div
+    cdkDragBoundary=".limit"
+    class="note"
+    *ngFor="let note of notes; let idx = index"
+    cdkDrag
+    [cdkDragFreeDragPosition]="note.position"
+    (cdkDragMoved)="onDragMoved($event, idx)"
+  >
+    <i class="handle" cdkDragHandle icon="icon_move"></i>
+    <p>Descrição</p>
+  </div>
+
+  <button
+    title="new note"
+    class="new_note"
+    matTooltip="Nova Nota"
+    matTooltipPosition="left"
+    mat-flat-button
+    (click)="newNote()"
+  >
+    <i icon="note"></i>
+  </button>
 </section>
