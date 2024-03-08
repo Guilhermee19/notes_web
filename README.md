@@ -17,3 +17,9 @@
 ```
 
 <!-- [![npm](https://img.shields.io/npm/v/vue3-particles)](https://www.npmjs.com/package/vue3-particles)  -->
+
+`git remote get-url origin` - pasta do projeto
+
+`git remote remove origin` - remove a pasta
+
+`git remote add origin <URL_GIT>` - add nova pasta
